@@ -1,179 +1,154 @@
-========================================================== ===================
-YOUSCRIPT-NEO
-========================================================== ===================
+YOUSCRIPT-NEO  
+Manual: v0.54
 
-Manual: v0.53
+It is recommended to consult the URL  
+https://bytes.lunanet.ovh/youscript/readme.html  
+for a possibly more up-to-date version of this manual.
 
-It is recommended to consult the URL https://bytes.lunanet.ovh/youscript/readme.html
-for a possible more up-to-date version of this manual.
+---
 
+**Table of Contents**  
+- What is it  
+- Installation  
+- How to use  
+- License  
 
-- What is it
+---
 
-- Installation
+**What is it**  
 
-- How to use
-
-- License
-
-
--------------------------------------------------- -------------------
-What is it
--------------------------------------------------- -------------------
-
-It is a public domain video downloader.
+YOUSCRIPT-NEO is a public domain video downloader.  
 
 Main capabilities:
-
 - Download videos from any website.
-- Browses the site and download the videos it finds.
-- Download multiple videos according to the list of URLs.
-- Resume the download(s) if the internet connection is lost.
+- Browse the site and download videos it finds.
+- Download multiple videos based on a list of URLs.
+- Resume downloads if the internet connection is lost.
 
+---
 
--------------------------------------------------- -------------------
-Installation
--------------------------------------------------- -------------------
+**Installation**  
 
-Navigate to the website: https://bytes.lunanet.ovh/youscript/
+1. Navigate to the website:  
+https://github.com/mikes82pt/youscript-neo
 
-Download the latest version suitable for your system.
+2. Download the latest version suitable for your system.
 
-Note: Youtube-DL requires Microsoft Visual C++ 2010 Redistributable Package (x86)
-Available from: https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe
+**Note**: YouTube-DL requires the Microsoft Visual C++ 2010 Redistributable Package (x86).  
+Available for download at:  
+https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe
 
-Once downloaded, unzip the file to a folder of your choice.
+3. Once downloaded, unzip the file to a folder of your choice.
 
-The folder "youscript-neo" will be created with the following folders:
+The folder "youscript-neo" will be created with the following subfolders:  
+- bin  
+- scripts  
+- videos (where the videos will be downloaded)
 
-- bin
-- scripts
-- videos (this is where the videos will be downloaded)
-
-In the "youscript-neo" folder you will also find the files:
-
-- menu.bat (the main menu)
+The "youscript-neo" folder will also contain these files:  
+- menu.bat (the main menu)  
 - url.txt (automatically created by menu.bat if not found)
 
+---
 
--------------------------------------------------- -------------------
-How to use
--------------------------------------------------- -------------------
+**How to Use**  
 
-Interaction with YOUSCRIPT-NEO is essentially done through the
-main menu:
+Interaction with YOUSCRIPT-NEO is mainly done through the main menu.
 
-1) In the file explorer, double click on the file: menu.bat
+1. In the file explorer, double-click on the file: menu.bat.
+2. Or, using the command line:
+   - Open a shell (cmd, PowerShell, etc.)
+   - Navigate to the YOUSCRIPT-NEO installation folder.
+   - Run the file: menu.bat.
 
-2) Or, using the command line:
+YOUSCRIPT-NEO will attempt to download the videos listed in the url.txt file.
 
-- Open a shell (cmd, powershell, ...)
-- Navigate to the YOUSCRIPT-NEO installation folder
-- Run the file: menu.bat
+- Write one URL per line in the url.txt file.  
+- Lines beginning with "#" are ignored.  
+- You can open the url.txt file from the menu using the "a" option.
 
+---
 
-YOUSCRIPT-NEO will try to download the videos indicated in the url.txt file.
+**Main Menu Options:**
 
-Write in that file one URL per line.
-Note: Lines beginning with # are ignored.
-The url.txt file can be opened in the menu using the "a" option
+1) Default  
+Download the videos listed in url.txt. Downloads will be in the best possible quality and codec, which may not necessarily be the user's preference.
 
-----------------------------
-Main menu options:
-----------------------------
+2) Up to 1080p H264  
+Download videos up to 1080p with the H264 codec.
 
+3) Up to 720p H264  
+Download videos up to 720p with the H264 codec.
 
-- 1 Default
+4) Up to 480p H264  
+Download videos up to 480p with the H264 codec.
 
-Download the videos indicated in the url.txt file.
-Download in the best possible quality and in the best possible codec,
-not necessarily what the user might want.
+5) Up to 360p H264  
+Download videos up to 360p with the H264 codec.
 
-- 2 Up to 1080p H264
-- 3 Up to 720p H264
-- 4 Up to 480p H264
-- 5 Up to 360p H264
+6) YouTube Audio Only  
+For YouTube videos, download only the audio.
 
-Instead of using the best quality (and codec) available, use the one indicated
-(or lower, if the indicated box does not exist).
+7) List Formats  
+For each given URL, list the formats available for download.
 
-- 6 Youtube audio only
+8) Organize Files  
+Move downloaded files from ./videos to ./videos/yt.  
+Note: "yt" for YouTube videos. The program will attempt to organize the videos into folders as best as it can.
 
-In the case of YouTube videos, download only the audio.
+9) Update  
+Update yt-dlp, the YOUSCRIPT-NEO engine (scripts are not updated).  
+It's important to update if YOUSCRIPT-NEO fails to download from a particular site.
 
-- 7 List formats
+a) Open URL List File  
+Open url.txt in Notepad. You can then add URLs (one per line).
 
-For each given URL, list the formats that are available
-for download.
+x) Extra  
+Extra options for advanced users. If you're unsure, don't use these options.
 
-- 8 Organize files
+r) Clean URL List  
+Remove the contents of url.txt (the file itself is not deleted).
 
-Move downloaded files from ./videos to ./videos/yt
+h) Help  
+Open this file in Notepad.
 
-Note: "yt" in case of YouTube videos.
-The program tries to organize the videos by folders as best it can.
+q) Exit  
+Exit the menu and return to the file explorer or shell.
 
-- 9 Update
+---
 
-Update or update yt-dlp, the YOUSCRIPT-NEO engine (the scripts
-are not updated). It is essential to update if YOUSCRIPT-NEO
-unable to download from any particular site.
+**License**  
 
-- a Open url list file
+Public Domain  
+Unlicense: https://unlicense.org/
 
-Open the url.txt file with notepad.
-Then just enter the URL's here. (1 URL per line)
+---
 
-
-- x Extra
-
-Extra options: for those who know what they are doing. who needs
-reading the manual should not use these options.
-
-- r Clean url.txt
-
-Remove the contents of the url.txt file (the file itself is not deleted).
-
-- h Help
-
-Open notepad with this file.
-
-- 0 exit
-
-Leave the menu. Exit YOUSCRIPT-NEO. Return to explorer (or shell).
+**What's New?**
 
 
--------------------------------------------------- -------------------
-License
--------------------------------------------------- -------------------
-
-Public domain.
-
-Unlicence: https://unlicense.org/
+Version 0.54 (2025-01-26)
+- Updated FFmpeg from version 6.0 to 7.1 (64-bit only).
+- A backup is created when url.txt is deleted.
+- Menu changes: "q" is now used to exit, instead of "0" or nothing.
+- Cleaned up old code.
 
 
+Version 0.53 (2023-07-09)  
+- Updated ffmpeg from version 5.1.2 to 6.0 (64bit only).  
+- Small correction in the extra menu.
 
+Version 0.52 (2023-02-04)  
+- Fixed issue with file organization not always working.  
+- Updated ffmpeg from version 5.1 to 5.1.2 (64bit only).  
+- Small correction in the extra menu.
 
--------------------------------------------------- -------------------
-What's new?
--------------------------------------------------- -------------------
-Version 0.53 2023-07-09
--Update of ffmpeg from version 5.1.2 to version 6.0 (64bit only)
--Small correction in the extra menu
+Version 0.51 (2023-01-30)  
+- The "8 Organize Files" option now organizes based on metadata instead of file name.  
+- Small optimizations in folder management and bug fixes.
 
+Version 0.50 (2023-01-22)  
+- Removed the "Ask for URL" menu and replaced it with the option to open url.txt.  
+- Videos are now transferred with metadata.
 
-Version 0.52 2023-02-04
--Small resolution to solve the problem of file organization not always working;
--Update of ffmpeg from version 5.1 to version 5.1.2 (64bit only)
--Small correction in the extra menu
-
-
-Version 0.51 01-30-2023
--The "8 Organize files" option now organizes based on information in the metadata instead of the file name;
--Small optimizations in folder management and bug fixing.
-
-
-
-Version 0.50 2023-01-22
-- Menu "ask for url" was removed and replaced by the option to open url.txt file in the menu;
-- Videos are transferred with the metadata
+---
