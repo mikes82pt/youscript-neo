@@ -126,6 +126,13 @@ Unlicense: https://unlicense.org/
 
 **What's New?**
 
+Version 0.55 (2025-07-20)
+
+Downloads folder renamed from "Videos" to "Media."
+- "Ignore Errors" feature removed.
+- Added option to retrieve only filenames.
+- FFmpeg version updated to 7.1.1.
+
 
 Version 0.54 (2025-01-26)
 - Updated FFmpeg from version 6.0 to 7.1 (64-bit only).
