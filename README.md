@@ -1,9 +1,5 @@
 YOUSCRIPT-NEO  
-Manual: v0.54
-
-It is recommended to consult the URL  
-https://bytes.lunanet.ovh/youscript/readme.html  
-for a possibly more up-to-date version of this manual.
+Manual: v0.55
 
 ---
 
