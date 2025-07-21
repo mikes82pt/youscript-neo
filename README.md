@@ -1,5 +1,5 @@
 YOUSCRIPT-NEO  
-Manual: v0.55
+
 
 ---
 
